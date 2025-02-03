@@ -3,179 +3,179 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
 }
 
 @layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 45 93% 47%;
-    --primary-foreground: 0 0% 100%;
-    --secondary: 45 100% 96%;
-    --secondary-foreground: 45 93% 47%;
-    --muted: 45 100% 96%;
-    --muted-foreground: 45 20% 40%;
-    --accent: 45 100% 96%;
-    --accent-foreground: 45 93% 47%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 45 10% 90%;
-    --input: 45 10% 90%;
-    --ring: 45 93% 47%;
-    --radius: 0.5rem;
-  }
+	:root {
+		--background: 0 0% 100%;
+		--foreground: 0 0% 3.9%;
+		--card: 0 0% 100%;
+		--card-foreground: 0 0% 3.9%;
+		--popover: 0 0% 100%;
+		--popover-foreground: 0 0% 3.9%;
+		--primary: 45 93% 47%;
+		--primary-foreground: 0 0% 100%;
+		--secondary: 45 100% 96%;
+		--secondary-foreground: 45 93% 47%;
+		--muted: 45 100% 96%;
+		--muted-foreground: 45 20% 40%;
+		--accent: 45 100% 96%;
+		--accent-foreground: 45 93% 47%;
+		--destructive: 0 84.2% 60.2%;
+		--destructive-foreground: 0 0% 98%;
+		--border: 45 10% 90%;
+		--input: 45 10% 90%;
+		--ring: 45 93% 47%;
+		--radius: 0.5rem;
+	}
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
 }
 
 @keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 @keyframes slide-in-left {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+	from {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 @keyframes slide-in-right {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+	from {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
 }
 
 @keyframes zoom-in {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+	from {
+		opacity: 0;
+		transform: scale(0.95);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
 }
 
 @keyframes bounce-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  70% {
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+	0% {
+		opacity: 0;
+		transform: scale(0.3);
+	}
+	50% {
+		transform: scale(1.05);
+	}
+	70% {
+		transform: scale(0.9);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
 }
 
 .animate-fade-up {
-  animation: fade-up 0.5s ease-out forwards;
+	animation: fade-up 0.5s ease-out forwards;
 }
 
 .animate-slide-left {
-  animation: slide-in-left 0.5s ease-out forwards;
+	animation: slide-in-left 0.5s ease-out forwards;
 }
 
 .animate-slide-right {
-  animation: slide-in-right 0.5s ease-out forwards;
+	animation: slide-in-right 0.5s ease-out forwards;
 }
 
 .animate-zoom {
-  animation: zoom-in 0.5s ease-out forwards;
+	animation: zoom-in 0.5s ease-out forwards;
 }
 
 .animate-bounce-in {
-  animation: bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+	animation: bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
 }
 
 .animation-delay-100 {
-  animation-delay: 100ms;
+	animation-delay: 100ms;
 }
 
 .animation-delay-200 {
-  animation-delay: 200ms;
+	animation-delay: 200ms;
 }
 
 .animation-delay-300 {
-  animation-delay: 300ms;
+	animation-delay: 300ms;
 }
 
 .animation-delay-400 {
-  animation-delay: 400ms;
+	animation-delay: 400ms;
 }
 
 .animation-delay-500 {
-  animation-delay: 500ms;
+	animation-delay: 500ms;
 }
 
 .hover-scale {
-  transition: transform 0.3s ease;
+	transition: transform 0.3s ease;
 }
 
 .hover-scale:hover {
-  transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 .image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 1rem;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 1rem;
 }
 
 .image-grid-item {
-  position: relative;
-  aspect-ratio: 1;
-  overflow: hidden;
-  border-radius: var(--radius);
-  cursor: pointer;
+	position: relative;
+	aspect-ratio: 1;
+	overflow: hidden;
+	border-radius: var(--radius);
+	cursor: pointer;
 }
 
 .image-grid-item:hover .image-overlay {
-  opacity: 1;
+	opacity: 1;
 }
 
 .image-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.3s ease;
 }
