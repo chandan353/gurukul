@@ -1,18 +1,24 @@
 import Image from "next/image";
 import { Card } from "@/components/ui/card";
+import group_tour from "../assets/image/about/tour_group.jpg";
+import shikhamishra from "../assets/image/faces/shikhamishra.jpg";
+import umeshmishra from "../assets/image/faces/umeshmishra.jpg";
+import gauravvishwakarma from "../assets/image/faces/gaurav_vishwakarma.jpg";
+import deepakojha from "../assets/image/faces/deepak.jpg";
+import nuruz from "../assets/image/faces/nuruz.jpg";
 
 export default function AboutPage() {
 	const teachers = [
 		{
-			name: "Gaurav Vishwakarma",
-			position: "Principal",
-			image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+			name: "Deepak Ojha",
+			position: "Co-ordinator",
+			image: deepakojha,
 			subject: "Leadership",
 		},
 		{
-			name: "Mr. David Chen",
-			position: "Vice Principal",
-			image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+			name: "Mr. Nuruzzaman Khan",
+			position: "Creative Head",
+			image: nuruz,
 			subject: "Mathematics",
 		},
 		{
@@ -50,7 +56,7 @@ export default function AboutPage() {
 						</div>
 						<div className="relative h-[400px]">
 							<Image
-								src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655"
+								src={group_tour}
 								alt="School Mission"
 								fill
 								className="object-cover rounded-lg"
@@ -69,7 +75,7 @@ export default function AboutPage() {
 						</h2>
 						<div className="relative w-32 h-32 mx-auto mb-6">
 							<Image
-								src="https://images.unsplash.com/photo-1494790108377-be9c29b29330"
+								src={umeshmishra}
 								alt="Director"
 								fill
 								className="object-cover rounded-full"
@@ -83,7 +89,7 @@ export default function AboutPage() {
 							providing an environment where every child can
 							thrive and reach their full potential."
 						</blockquote>
-						<p className="mt-4 font-semibold">Shikha Mishra</p>
+						<p className="mt-4 font-semibold">Umesh Mishra</p>
 						<p className="text-gray-600">
 							Director, Gurukul Academy
 						</p>
@@ -96,11 +102,11 @@ export default function AboutPage() {
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-12">
 						<h2 className="text-3xl font-bold mb-6">
-							Principal's Message
+							Manager's Message
 						</h2>
 						<div className="relative w-32 h-32 mx-auto mb-6">
 							<Image
-								src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+								src={shikhamishra}
 								alt="Principal"
 								fill
 								className="object-cover rounded-full"
@@ -111,6 +117,36 @@ export default function AboutPage() {
 							inspires curiosity, creativity, and excellence. We
 							believe in the potential of every student and work
 							tirelessly to help them achieve their dreams."
+						</blockquote>
+						<p className="mt-4 font-semibold">Shikha Mishra</p>
+						<p className="text-gray-600">
+							Manager, Gurukul Academy
+						</p>
+					</div>
+				</div>
+			</section>
+
+			{/* Principal's Message */}
+			<section className="py-16">
+				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+					<div className="text-center mb-12">
+						<h2 className="text-3xl font-bold mb-6">
+							Principal's Message
+						</h2>
+						<div className="relative w-32 h-32 mx-auto mb-6">
+							<Image
+								src={gauravvishwakarma}
+								alt="Principal"
+								fill
+								className="object-cover rounded-full"
+							/>
+						</div>
+						<blockquote className="text-lg text-gray-600 max-w-3xl mx-auto">
+							"At Gurukul Academy, we believe that education goes
+							beyond books—it’s about character, values, and
+							lifelong learning. We are committed to shaping
+							future leaders who embrace knowledge with passion
+							and integrity."
 						</blockquote>
 						<p className="mt-4 font-semibold">Gaurav Vishwakarma</p>
 						<p className="text-gray-600">

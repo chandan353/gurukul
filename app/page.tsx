@@ -16,35 +16,44 @@ import {
 	X,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import school from "./assets/image/school.jpg";
+import school from "./assets/image/school1.jpg";
+import lead_reel from "./assets/image/lead_reel.jpg";
+import annual_day from "./assets/image/gallery/annual_day.jpg";
+import science_exhibition from "./assets/image/gallery/sciene-exhibition1.jpg";
+import science_exhibition2 from "./assets/image/gallery/science_exhibiton2.jpg";
+import annual_day2 from "./assets/image/gallery/annual_day2.jpg";
+import sports_day from "./assets/image/gallery/sports_day.jpg";
+import sports_day2 from "./assets/image/gallery/sports_day2.jpg";
+import student_conference from "./assets/image/gallery/student_conference2.jpg";
+import science_city from "./assets/image/gallery/science_city.jpg";
+
 import { useState, useEffect, useCallback } from "react";
-import { it } from "node:test";
 
 export default function Home() {
 	const gallery = [
 		{
-			title: "Art & Craft",
-			image: "https://images.unsplash.com/photo-1602145461313-26c587cc0ca9?auto=format&fit=crop&q=80&w=800",
+			title: "Annual Day",
+			image: annual_day,
 		},
 		{
-			title: "Yoga Classes",
-			image: "https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=800",
+			title: "Science Exhibition",
+			image: science_exhibition2,
 		},
 		{
-			title: "Music Room",
-			image: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&q=80&w=800",
+			title: "Annual Day",
+			image: annual_day2,
 		},
 		{
-			title: "Computer Lab",
-			image: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&q=80&w=800",
+			title: "Sports Day",
+			image: sports_day2,
 		},
 		{
-			title: "Library",
-			image: "https://images.unsplash.com/photo-1521587760476-6c12a4b040da?auto=format&fit=crop&q=80&w=800",
+			title: "Student Led Conference",
+			image: student_conference,
 		},
 		{
-			title: "Sports Ground",
-			image: "https://images.unsplash.com/photo-1587590227264-0ac64ce63ce8?auto=format&fit=crop&q=80&w=800",
+			title: "Science City Tour",
+			image: science_city,
 		},
 	];
 
@@ -84,12 +93,10 @@ export default function Home() {
 
 	const reels = [
 		{
-			title: "Annual Day Celebration",
-			description:
-				"Students showcasing their talents through dance and music",
-			video: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=1200",
-			thumbnail:
-				"https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&q=80&w=800",
+			title: "Learning in a funny way",
+			description: "Students of UKG learning body parts",
+			video: "https://www.instagram.com/leadschoolindia/reel/DCZGG60O1R5/",
+			thumbnail: lead_reel,
 		},
 		{
 			title: "Science Exhibition",
