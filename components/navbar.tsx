@@ -21,9 +21,7 @@ export function Navbar() {
 		{ href: "/", label: "Home" },
 		{ href: "/about", label: "About Us" },
 		{ href: "/gallery", label: "Gallery" },
-		// { href: '/academics', label: 'Academics' },
-		// { href: '/admissions', label: 'Admissions' },
-		{ href: "/contact", label: "Contact" },
+		{ href: "/contact-us", label: "Contact" },
 	];
 
 	return (

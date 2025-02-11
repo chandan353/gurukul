@@ -1,5 +1,12 @@
 import Link from "next/link";
-import { GraduationCap, Phone, Mail, MapPin } from "lucide-react";
+import {
+	GraduationCap,
+	Phone,
+	Mail,
+	MapPin,
+	Facebook,
+	Instagram,
+} from "lucide-react";
 
 export function Footer() {
 	return (
@@ -33,10 +40,18 @@ export function Footer() {
 							</li>
 							<li>
 								<Link
-									href="/contact"
+									href="/contact-us"
 									className="text-gray-600 hover:text-primary transition-colors"
 								>
 									Contact
+								</Link>
+							</li>
+							<li>
+								<Link
+									href="/gallery"
+									className="text-gray-600 hover:text-primary transition-colors"
+								>
+									Gallery
 								</Link>
 							</li>
 						</ul>
@@ -53,7 +68,7 @@ export function Footer() {
 							</li>
 							<li className="flex items-center space-x-2 text-gray-600">
 								<Mail className="h-4 w-4" />
-								<span>info@gurukulacademy.edu</span>
+								<span>gurukulacademyblp@gmail.com</span>
 							</li>
 
 							<li className="flex items-center space-x-2 text-gray-600">
@@ -68,16 +83,44 @@ export function Footer() {
 						</ul>
 					</div>
 
-					<div>
+					<div className="text-center">
 						<h3 className="font-semibold text-lg mb-4 text-gray-900">
-							School Hours
+							Follow Us
 						</h3>
-						<ul className="space-y-2 text-gray-600">
-							<li>Monday - Friday</li>
-							<li>8:00 AM - 3:00 PM</li>
-							<li>Saturday</li>
-							<li>8:00 AM - 12:00 PM</li>
-						</ul>
+						<div className="flex justify-center space-x-6">
+							{/* <a
+								href="https://twitter.com/yourprofile"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-yellow-800 hover:text-yellow-600 transition-colors"
+							>
+								<Twitter className="h-8 w-8" />
+							</a> */}
+							<a
+								href="https://facebook.com/people/Gurukul-Academy-Powered-by-Lead"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-yellow-800 hover:text-yellow-600 transition-colors"
+							>
+								<Facebook className="h-8 w-8" />
+							</a>
+							<a
+								href="https://www.instagram.com/gurukul_academy_by_lead"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-yellow-800 hover:text-yellow-600 transition-colors"
+							>
+								<Instagram className="h-8 w-8" />
+							</a>
+							{/* <a
+								href="https://linkedin.com/in/yourprofile"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="text-yellow-800 hover:text-yellow-600 transition-colors"
+							>
+								<Linkedin className="h-8 w-8" />
+							</a> */}
+						</div>
 					</div>
 				</div>
 

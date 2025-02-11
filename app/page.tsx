@@ -1,33 +1,31 @@
 "use client";
 import { Card, CardContent } from "@/components/ui/card";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import {
-	ArrowRight,
 	Trophy,
 	Users,
 	BookOpen,
 	Laptop,
 	Code,
 	Brain,
-	ChevronRight,
-	ChevronLeft,
 	Play,
-	X,
 } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import school from "./assets/image/school1.jpg";
-import lead_reel from "./assets/image/lead_reel.jpg";
+import lead_reel from "./assets/image/reel/lead_reel.jpg";
 import annual_day from "./assets/image/gallery/annual_day.jpg";
-import science_exhibition from "./assets/image/gallery/sciene-exhibition1.jpg";
 import science_exhibition2 from "./assets/image/gallery/science_exhibiton2.jpg";
 import annual_day2 from "./assets/image/gallery/annual_day2.jpg";
-import sports_day from "./assets/image/gallery/sports_day.jpg";
 import sports_day2 from "./assets/image/gallery/sports_day2.jpg";
 import student_conference from "./assets/image/gallery/student_conference2.jpg";
 import science_city from "./assets/image/gallery/science_city.jpg";
-
-import { useState, useEffect, useCallback } from "react";
+import volcano_model from "./assets/image/reel/volcano_model.jpg";
+import india_map from "./assets/image/reel/india_map.jpg";
+import christmas from "./assets/image/reel/christmas.jpg";
+import krishna_janamastmi from "./assets/image/reel/krishna_janamastmi.jpg";
+import viral_students from "./assets/image/reel/viral_students.jpg";
+import Slider from "react-slick";
+import { ContactForm } from "@/components/contact-form";
 
 export default function Home() {
 	const gallery = [
@@ -100,84 +98,58 @@ export default function Home() {
 		},
 		{
 			title: "Science Exhibition",
-			description: "Young innovators presenting their projects",
-			video: "https://images.unsplash.com/photo-1530538987395-032d1800fdd0?auto=format&fit=crop&q=80&w=1200",
-			thumbnail:
-				"https://images.unsplash.com/photo-1530538987395-032d1800fdd0?auto=format&fit=crop&q=80&w=800",
+			description: "Young innovators presenting their volcano model",
+			video: "https://www.instagram.com/gurukul_academy_by_lead/reel/DEfArZTyFnM/",
+			thumbnail: volcano_model,
 		},
 		{
-			title: "Sports Meet",
-			description: "Students competing in various athletic events",
-			video: "https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&q=80&w=1200",
-			thumbnail:
-				"https://images.unsplash.com/photo-1526676037777-05a232554f77?auto=format&fit=crop&q=80&w=800",
+			title: "Republic Day Celebration",
+			description: "Students making map of India",
+			video: "https://www.instagram.com/gurukul_academy_by_lead/reel/DFSbSGzylgT/",
+			thumbnail: india_map,
 		},
 		{
-			title: "Art Exhibition",
+			title: "Viral Kids of Gurukul Academy",
 			description: "Creative expressions by our talented students",
-			video: "https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=1200",
-			thumbnail:
-				"https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?auto=format&fit=crop&q=80&w=800",
+			video: "https://www.instagram.com/gurukul_academy_by_lead/reel/DCvbb09SpUd/",
+			thumbnail: viral_students,
 		},
 		{
-			title: "Music Concert",
-			description: "Annual musical performance by students",
-			video: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&q=80&w=1200",
-			thumbnail:
-				"https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?auto=format&fit=crop&q=80&w=800",
+			title: "Christmas Celebration",
+			description: "Christmas celebration in Gurukul Academy",
+			video: "https://www.instagram.com/gurukul_academy_by_lead/reel/DFKVm10yXHV/",
+			thumbnail: christmas,
 		},
 		{
-			title: "Yoga Day",
-			description: "Students practicing yoga for mind and body wellness",
-			video: "https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=1200",
-			thumbnail:
-				"https://images.unsplash.com/photo-1599447421416-3414500d18a5?auto=format&fit=crop&q=80&w=800",
+			title: "Krishna Janamshatmi",
+			description: "Students wearing traditional attire on Janamastmi",
+			video: "https://www.instagram.com/gurukul_academy_by_lead/reel/DFKUh7LyHQd/",
+			thumbnail: krishna_janamastmi,
 		},
 	];
 
-	const [selectedReel, setSelectedReel] = useState<number | null>(null);
-	const [currentSlide, setCurrentSlide] = useState(0);
-
-	const [itemsPerPage, setItemsPerPage] = useState(4);
-
-	useEffect(() => {
-		function computeItemsPerPage() {
-			if (window.innerWidth < 768) return 1;
-			if (window.innerWidth < 1024) return 2;
-			return 4;
-		}
-
-		function handleResize() {
-			setItemsPerPage(computeItemsPerPage());
-		}
-		handleResize();
-
-		window.addEventListener("resize", handleResize);
-		return () => window.removeEventListener("resize", handleResize);
-	}, []);
-
-	console.log(itemsPerPage, "item");
-
-	const totalSlides = reels.length - itemsPerPage + 1;
-
-	// Move forward 1 item
-	const nextSlide = useCallback(() => {
-		setCurrentSlide((prev) => (prev + 1) % totalSlides);
-	}, [totalSlides]);
-
-	// Move backward 1 item
-	const prevSlide = () => {
-		setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides);
+	const sliderSettings = {
+		dots: true,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 4,
+		slidesToScroll: 1,
+		arrows: true,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: {
+					slidesToShow: 2, // when width < 1024px, show 2 slides
+				},
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 1, // when width < 768px, show 1 slide
+				},
+			},
+		],
 	};
-	// Each item’s width in %
-	const itemWidthPercent = 100 / itemsPerPage;
-	// Overall container width in %
-	const containerWidthPercent = reels.length * itemWidthPercent;
-
-	useEffect(() => {
-		const timer = setInterval(nextSlide, 5000);
-		return () => clearInterval(timer);
-	}, [nextSlide]);
 
 	return (
 		<>
@@ -200,12 +172,6 @@ export default function Home() {
 							Nurturing minds, shaping futures through excellence
 							in education
 						</p>
-						<Button
-							size="lg"
-							className="animate-fade-up animation-delay-300"
-						>
-							Learn More <ArrowRight className="ml-2" />
-						</Button>
 					</div>
 				</div>
 			</section>
@@ -273,130 +239,40 @@ export default function Home() {
 					<h2 className="text-3xl font-bold text-center mb-12">
 						School Life
 					</h2>
-					<div className="relative">
-						<div className="overflow-hidden">
-							<motion.div
-								className="flex transition-transform duration-500 ease-out"
-								style={{
-									// transform: `translateX(-${
-									// 	currentSlide * (100 / itemsPerPage)
-									// }%)`,
-									transform: `translateX(-${
-										currentSlide * (100 / itemsPerPage)
-									}%)`,
-									width: `${
-										(reels.length / itemsPerPage) * 100
-									}%`,
-								}}
-							>
-								{reels.map((reel, index) => (
-									<div
-										key={index}
-										className="w-full sm:w-1/2 lg:w-1/4 px-2"
-									>
-										<motion.div
-											initial={{ opacity: 0, y: 20 }}
-											whileInView={{ opacity: 1, y: 0 }}
-											transition={{ duration: 0.5 }}
-											viewport={{ once: true }}
-											onClick={() =>
-												setSelectedReel(index)
-											}
-											className="cursor-pointer group"
-										>
-											<Card className="overflow-hidden border-primary/20 hover:border-primary/50 transition-colors">
-												<div className="relative aspect-[9/16]">
-													<Image
-														src={reel.thumbnail}
-														alt={reel.title}
-														fill
-														className="object-cover"
-													/>
-													<div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors" />
-													<div className="absolute inset-0 flex items-center justify-center">
-														<div className="h-16 w-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-															<Play className="h-8 w-8 text-white" />
-														</div>
-													</div>
+					<Slider {...sliderSettings}>
+						{reels.map((reel, index) => (
+							<div key={index} className="px-2">
+								<div className="cursor-pointer group">
+									<Card className="overflow-hidden border-primary/20 hover:border-primary/50 transition-colors">
+										<div className="relative aspect-[9/16]">
+											<Image
+												src={reel.thumbnail}
+												alt={reel.title}
+												fill
+												className="object-cover"
+											/>
+											<div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors" />
+											<div className="absolute inset-0 flex items-center justify-center">
+												<div className="h-16 w-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+													<Play className="h-8 w-8 text-white" />
 												</div>
-												<CardContent className="p-4">
-													<h3 className="font-semibold text-lg">
-														{reel.title}
-													</h3>
-													<p className="text-muted-foreground text-sm">
-														{reel.description}
-													</p>
-												</CardContent>
-											</Card>
-										</motion.div>
-									</div>
-								))}
-							</motion.div>
-						</div>
-
-						{/* Navigation Arrows */}
-						<button
-							onClick={prevSlide}
-							className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-8 bg-primary/90 text-white p-2 rounded-full hover:bg-primary transition-colors"
-							aria-label="Previous slide"
-						>
-							<ChevronLeft className="h-6 w-6" />
-						</button>
-						<button
-							onClick={nextSlide}
-							className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-8 bg-primary/90 text-white p-2 rounded-full hover:bg-primary transition-colors"
-							aria-label="Next slide"
-						>
-							<ChevronRight className="h-6 w-6" />
-						</button>
-
-						{/* Navigation Dots */}
-						<div className="flex justify-center mt-6 space-x-2">
-							{Array.from({ length: totalSlides }).map(
-								(_, index) => (
-									<button
-										key={index}
-										onClick={() => setCurrentSlide(index)}
-										className={`h-2 rounded-full transition-all ${
-											currentSlide === index
-												? "w-6 bg-primary"
-												: "w-2 bg-primary/30"
-										}`}
-										aria-label={`Go to slide ${index + 1}`}
-									/>
-								)
-							)}
-						</div>
-					</div>
+											</div>
+										</div>
+										<CardContent className="p-4">
+											<h3 className="font-semibold text-lg">
+												{reel.title}
+											</h3>
+											<p className="text-muted-foreground text-sm">
+												{reel.description}
+											</p>
+										</CardContent>
+									</Card>
+								</div>
+							</div>
+						))}
+					</Slider>
 				</div>
 			</section>
-
-			{/* Full Screen Reel */}
-			<AnimatePresence>
-				{selectedReel !== null && (
-					<motion.div
-						initial={{ opacity: 0 }}
-						animate={{ opacity: 1 }}
-						exit={{ opacity: 0 }}
-						className="fixed inset-0 bg-black z-50 flex items-center justify-center"
-					>
-						<button
-							onClick={() => setSelectedReel(null)}
-							className="absolute top-4 right-4 text-white hover:text-white/80 z-10"
-						>
-							<X className="h-8 w-8" />
-						</button>
-						<div className="relative w-[360px] h-[640px]">
-							<Image
-								src={reels[selectedReel].video}
-								alt={reels[selectedReel].title}
-								fill
-								className="object-cover rounded-lg"
-							/>
-						</div>
-					</motion.div>
-				)}
-			</AnimatePresence>
 
 			{/* Gallery Section */}
 			<section className="py-20 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
@@ -427,6 +303,19 @@ export default function Home() {
 							</div>
 						</motion.div>
 					))}
+				</div>
+			</section>
+
+			<section className="py-20 bg-secondary/50">
+				<div className="px-4 md:px-6 lg:px-8 max-w-3xl mx-auto">
+					<h2 className="text-3xl font-bold text-center mb-12">
+						Contact Us
+					</h2>
+					<Card className="p-6">
+						<CardContent>
+							<ContactForm />
+						</CardContent>
+					</Card>
 				</div>
 			</section>
 		</>

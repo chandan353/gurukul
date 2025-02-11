@@ -6,6 +6,7 @@ import umeshmishra from "../assets/image/faces/umeshmishra.jpg";
 import gauravvishwakarma from "../assets/image/faces/gaurav_vishwakarma.jpg";
 import deepakojha from "../assets/image/faces/deepak.jpg";
 import nuruz from "../assets/image/faces/nuruz.jpg";
+import surbhi from "../assets/image/faces/surbhi_tripathi.jpg";
 
 export default function AboutPage() {
 	const teachers = [
@@ -22,12 +23,11 @@ export default function AboutPage() {
 			subject: "Mathematics",
 		},
 		{
-			name: "Ms. Emily Brown",
+			name: "Ms. Surbhi Tripathi",
 			position: "Senior Teacher",
-			image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
+			image: surbhi,
 			subject: "English",
 		},
-		// Add more teachers as needed
 	];
 
 	return (
@@ -97,7 +97,7 @@ export default function AboutPage() {
 				</div>
 			</section>
 
-			{/* Principal's Message */}
+			{/* Manager's Message */}
 			<section className="py-16 bg-gray-50">
 				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 					<div className="text-center mb-12">
@@ -152,43 +152,6 @@ export default function AboutPage() {
 						<p className="text-gray-600">
 							Principal, Gurukul Academy
 						</p>
-					</div>
-				</div>
-			</section>
-
-			{/* Teachers Section */}
-			<section className="py-16">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<h2 className="text-3xl font-bold mb-12 text-center">
-						Our Teachers
-					</h2>
-					<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-						{teachers.map((teacher, index) => (
-							<Card
-								key={index}
-								className="overflow-hidden hover:shadow-lg transition-shadow"
-							>
-								<div className="relative h-64">
-									<Image
-										src={teacher.image}
-										alt={teacher.name}
-										fill
-										className="object-cover"
-									/>
-								</div>
-								<div className="p-6">
-									<h3 className="text-xl font-semibold mb-2">
-										{teacher.name}
-									</h3>
-									<p className="text-gray-600 mb-2">
-										{teacher.position}
-									</p>
-									<p className="text-gray-500">
-										{teacher.subject}
-									</p>
-								</div>
-							</Card>
-						))}
 					</div>
 				</div>
 			</section>

@@ -1,30 +1,32 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { Navbar } from '@/components/navbar';
-import { Footer } from '@/components/footer';
-import { Toaster } from '@/components/ui/toaster';
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import { Navbar } from "@/components/navbar";
+import { Footer } from "@/components/footer";
+import { Toaster } from "@/components/ui/toaster";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Gurukul Academy',
-  description: 'Nurturing minds, shaping futures - Gurukul Academy',
+	title: "Gurukul Academy",
+	description: "Nurturing minds, shaping futures - Gurukul Academy",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: {
-  children: React.ReactNode;
+	children: React.ReactNode;
 }) {
-  return (
-    <html lang="en" className="scroll-smooth">
-      <body className={inter.className}>
-        <Navbar />
-        <main className="min-h-screen">{children}</main>
-        <Footer />
-        <Toaster />
-      </body>
-    </html>
-  );
+	return (
+		<html lang="en" className="scroll-smooth">
+			<body className={inter.className}>
+				<Navbar />
+				<main className="min-h-screen">{children}</main>
+				<Footer />
+				<Toaster />
+			</body>
+		</html>
+	);
 }
