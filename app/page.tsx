@@ -25,7 +25,7 @@ import christmas from "./assets/image/reel/christmas.jpg";
 import krishna_janamastmi from "./assets/image/reel/krishna_janamastmi.jpg";
 import viral_students from "./assets/image/reel/viral_students.jpg";
 import Slider from "react-slick";
-import { ContactForm } from "@/components/contact-form";
+import { GoogleFormEmbed } from "@/components/contact-form";
 
 export default function Home() {
 	const gallery = [
@@ -313,7 +313,7 @@ export default function Home() {
 					</h2>
 					<Card className="p-6">
 						<CardContent>
-							<ContactForm />
+							<GoogleFormEmbed />
 						</CardContent>
 					</Card>
 				</div>
