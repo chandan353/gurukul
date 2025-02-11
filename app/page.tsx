@@ -242,32 +242,39 @@ export default function Home() {
 					<Slider {...sliderSettings}>
 						{reels.map((reel, index) => (
 							<div key={index} className="px-2">
-								<div className="cursor-pointer group">
-									<Card className="overflow-hidden border-primary/20 hover:border-primary/50 transition-colors">
-										<div className="relative aspect-[9/16]">
-											<Image
-												src={reel.thumbnail}
-												alt={reel.title}
-												fill
-												className="object-cover"
-											/>
-											<div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors" />
-											<div className="absolute inset-0 flex items-center justify-center">
-												<div className="h-16 w-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
-													<Play className="h-8 w-8 text-white" />
+								<a
+									href={reel.video}
+									target="_blank"
+									rel="noopener noreferrer"
+									className="cursor-pointer group block"
+								>
+									<div className="cursor-pointer group">
+										<Card className="overflow-hidden border-primary/20 hover:border-primary/50 transition-colors">
+											<div className="relative aspect-[9/16]">
+												<Image
+													src={reel.thumbnail}
+													alt={reel.title}
+													fill
+													className="object-cover"
+												/>
+												<div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors" />
+												<div className="absolute inset-0 flex items-center justify-center">
+													<div className="h-16 w-16 rounded-full bg-primary/90 flex items-center justify-center group-hover:scale-110 transition-transform">
+														<Play className="h-8 w-8 text-white" />
+													</div>
 												</div>
 											</div>
-										</div>
-										<CardContent className="p-4">
-											<h3 className="font-semibold text-lg">
-												{reel.title}
-											</h3>
-											<p className="text-muted-foreground text-sm">
-												{reel.description}
-											</p>
-										</CardContent>
-									</Card>
-								</div>
+											<CardContent className="p-4">
+												<h3 className="font-semibold text-lg">
+													{reel.title}
+												</h3>
+												<p className="text-muted-foreground text-sm">
+													{reel.description}
+												</p>
+											</CardContent>
+										</Card>
+									</div>
+								</a>
 							</div>
 						))}
 					</Slider>
