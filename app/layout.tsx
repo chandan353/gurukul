@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 	title: "Gurukul Academy",
 	description: "Nurturing minds, shaping futures - Gurukul Academy Balrampur",
 	openGraph: {
-		title: "Gurukul Academyr",
+		title: "Gurukul Academy",
 		description:
 			"Nurturing minds, shaping futures - Gurukul Academy Balrampur",
 		url: "https://gurukulacademybalrampur.in",
