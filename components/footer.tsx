@@ -97,7 +97,7 @@ export function Footer() {
 								<Twitter className="h-8 w-8" />
 							</a> */}
 							<a
-								href="https://facebook.com/people/Gurukul-Academy-Powered-by-Lead"
+								href="https://www.facebook.com/share/1FYMtdDrTF/"
 								target="_blank"
 								rel="noopener noreferrer"
 								className="text-yellow-800 hover:text-yellow-600 transition-colors"
