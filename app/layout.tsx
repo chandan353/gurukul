@@ -7,6 +7,7 @@ import { Footer } from "@/components/footer";
 import { Toaster } from "@/components/ui/toaster";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ClarityInit from "@/components/clarity-init";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -58,6 +59,8 @@ export default function RootLayout({
 				<main className="min-h-screen">{children}</main>
 				<Footer />
 				<Toaster />
+				{/* Initialize Clarity (client-only, production) */}
+				<ClarityInit />
 			</body>
 		</html>
 	);
